@@ -106,7 +106,7 @@ bool decodeJSON(char *json) {
       break;
   }
   if(number==0){
-    if(acz>15)
+    if(acz>17)
       map_pot();
   }
   else{
@@ -114,13 +114,13 @@ bool decodeJSON(char *json) {
   for(int i=0;i<number;i++)
       if(distance[i]<min_dist)
         min_dist=distance[i];
-  if(acz>15 && min_dist>10)
+  if(acz>17 && min_dist>10)
     map_pot();
-  if(acz>15 && min_dist>2 && min_dist<10){
+  if(acz>17 && min_dist>2 && min_dist<10){
     alert();
     map_pot();
   }
-  if(acz<15 && min_dist<10)
+  if(acz<17 && min_dist<10)
     alert(); 
 }
 }
